@@ -1,0 +1,14 @@
+<div class="game_page">
+  <div class="game_page_header">
+    <div class="game_page_header_logo">
+      <div class="game_page_logo"><img src="../../assets/img/game-logo.png" class="game_page_logo_img"></div>
+      <div class="game_page_title">WEREWOLF GAME</div>
+    </div>
+  </div>
+  <div class="game_page_body">
+    <div class="game_page_message" *ngIf="!gameStarted">WAIT...
+      <br/>
+      <br/> THE WINTER IS COMING...</div>
+    <app-card [player]="player" [gameEnded]="gameEnded" *ngIf="gameStarted"></app-card>
+  </div>
+</div>

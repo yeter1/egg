@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card_body back" *ngIf="!showCard && (player.lifeStatus === 'alive') && !gameEnded" (click)="toggleCard()">
+    <div class="card_back_logo">
+      <img src="../../assets/img/game-logo.png" alt="" class="card_back_img">
+    </div>
+    <div class="card_back_title">WEREWOLF GAME</div>
+  </div>
+
+  <div class="card_body front" *ngIf="showCard && (player.lifeStatus === 'alive') && !gameEnded" (click)="toggleCard()">
+    <div class="card_body_logo">
+      <img src={{card.imgUrl}} alt="" class="card_body_logo_img">
+    </div>
+    <div class="card_body_text">
+      <div class="card_body_text_title">{{card.title | uppercase}}</div>
+      <div class="card_body_text_description">{{card.description}}</div>
+    </div>
+  </div>
+
+  <div class="card_body end loser" *ngIf="(player.lifeStatus === 'dead') || (gameEnded && !player.winner)">
+    <div class="card_back_logo">
+      <img src="../../assets/img/game-logo.png" alt="" class="card_back_img">
+    </div>
+  </div>
+  <div class="card_title_container loser" *ngIf="(player.lifeStatus === 'dead') || (gameEnded && !player.winner)">
+     <h1 class="card_title loser_title">YOU FAILED YOUR MISSION!</h1>
+  </div>
+
+  <div class="card_body end winner" *ngIf="(gameEnded && player.winner)">
+    <div class="card_back_logo">
+      <img src="../../assets/img/game-logo.png" alt="" class="card_back_img">
+    </div>
+  </div>
+  <div class="card_title_container winner" *ngIf="(gameEnded && player.winner)">
+    <h1 class="card_title winner_title" *ngIf="player.role === 'werewolf'">CONGRATS! <br/> YOU TOOK OVER THE VILLAGE!</h1>
+    <h1 class="card_title winner_title" *ngIf="player.role !== 'werewolf'">CONGRATS!
+  <br/> YOU SAVED THE VILLAGE!</h1>
+  </div>
+
+  <div [ngClass]="getCSSClasses('lifeStatus')">{{player.lifeStatus | uppercase}}</div>
+</div>

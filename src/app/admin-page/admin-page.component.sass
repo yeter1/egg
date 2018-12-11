@@ -1,0 +1,141 @@
+@import '../app.component';
+
+.admin_page
+  +flex($direction:column, $align:center, $justify: space-evenly)
+  height: 90vh
+  padding: 20px 0
+
+.admin_page_header
+  +flex($direction: column, $align: center)
+  margin-bottom: 30px
+  width: 85vw
+
+.admin_page_header_logo
+  +flex($align: center, $justify: center)
+  
+.admin_page_logo
+  width: 50px
+  height: 50px
+
+.admin_page_logo_img
+  height: 100%
+  border-radius: 10px 0 0 10px
+
+.admin_page_title
+  color: $primary
+  font-size: 0.8em
+  font-weight: 600
+  width: 110px
+  height: 33px
+  padding: 5px
+  text-align: center
+  border: solid $primary 3.5px
+  border-radius: 0 10px 10px 0
+  background-color: $bg-color
+
+.admin_page_gameID
+  margin-top: 15px
+  font-size: 1.5em
+  color: $primary
+
+.admin_page_gameID_span
+  color: $primary
+  font-weight: 600
+
+.admin_page_playersList
+  +flex($direction:column)
+  height: 50vh
+  width: 75vw
+  max-width: 380px
+  overflow: auto;
+  overflow-y: scroll;
+  background-color: $bg-color
+  padding: 10px
+  border-radius: 10px
+
+.role_title
+  color: $primary
+  font-size: 1em
+  font-weight: 600
+  margin-bottom: 5px
+  margin-top: 5px
+
+::-webkit-scrollbar
+  display: none
+
+.admin_page_start_button
+  box-sizing: border-box
+  +flex($justify:center, $align:center)
+  height: 40px
+  width: 140px
+  cursor: pointer
+  color: $white
+  font-weight: 600
+  font-size: 1em
+  letter-spacing: 0.8px
+  background: $primary
+  padding: 0px 20px
+  margin: 0 1px 30px 0
+  box-shadow: 4px 4px 0px 0px rgba(50,50,50,0.4)
+  transition: all ease 0.5s
+  border: none
+  outline: none
+  border-radius: 10px
+
+  &:active
+    box-shadow: 0 0 0px 0px rgba(50,50,50,0.4)
+    transition: all ease 0.5s
+
+.admin_page_game_buttons
+  +flex($justify: space-evenly)
+  width: 75vw
+  max-width: 380px
+
+.admin_page_game_buttons_day
+  box-sizing: border-box
+  +flex($justify:center, $align:center)
+  height: 40px
+  width: 100px
+  cursor: pointer
+  color: $white
+  font-weight: 600
+  font-size: 1em
+  letter-spacing: 0.8px
+  background: $yellow
+  padding: 0px 20px
+  margin: 0 1px 30px 0
+  box-shadow: 4px 4px 0px 0px rgba(50,50,50,0.4)
+  transition: all ease 0.5s
+  border: none
+  outline: none
+  border-radius: 10px
+
+  &:hover
+    box-shadow: 0 0 0px 0px rgba(50,50,50,0.4)
+    transition: all ease 0.5s
+
+.admin_page_game_buttons_night
+  box-sizing: border-box
+  +flex($justify:center, $align:center)
+  height: 40px
+  width: 100px
+  cursor: pointer
+  color: $white
+  font-weight: 600
+  font-size: 1em
+  letter-spacing: 0.8px
+  background: $blue
+  padding: 0px 20px
+  margin: 0 1px 30px 0
+  box-shadow: 4px 4px 0px 0px rgba(50,50,50,0.4)
+  transition: all ease 0.5s
+  border: none
+  outline: none
+  border-radius: 10px
+
+  &:hover
+    box-shadow: 0 0 0px 0px rgba(50,50,50,0.4)
+    transition: all ease 0.5s
+
+fa-icon
+  font-size: 1.5em

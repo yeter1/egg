@@ -1,0 +1,49 @@
+@import '../app.component';
+
+.landpage
+  +flex($direction:column, $align:center)
+
+.landpage_header
+  margin-bottom: 10vh
+  
+.landpage_header_logo
+  width: 150px
+  height: 150px
+  margin-top: 20vh
+
+.landpage_header_logo_img
+  height: 100%
+  border-radius: 10px 10px 0 0
+
+.landpage_header_title
+  color: $primary
+  font-size: 1em
+  font-weight: 600
+  width: 134px
+  text-align: center
+  border: solid $primary
+  padding: 5px
+  border-radius: 0 0 10px 10px
+
+.landpage_button
+  box-sizing: border-box
+  +flex($justify:center, $align:center)
+  height: 40px
+  width: 150px
+  cursor: pointer
+  color: $white
+  font-weight: 600
+  font-size: 1em
+  letter-spacing: 0.8px
+  background: $primary
+  padding: 0px 20px
+  margin: 0 1px 30px 0
+  box-shadow: 4px 4px 0px 0px rgba(50,50,50,0.4)
+  transition: all ease 0.5s
+  border: none
+  outline: none
+  border-radius: 10px
+
+  &:active
+    box-shadow: 0 0 0px 0px rgba(50,50,50,0.4)
+    transition: all ease 0.5s
